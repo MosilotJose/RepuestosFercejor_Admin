@@ -10,6 +10,7 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
         <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
     </head>
@@ -117,6 +118,121 @@
                 </li>
             </ul>
         </nav>
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Registro del producto</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="miFormulario">
+                            <div class="mb-2 flex-grow-1">
+                                <label class="col-form-label" style="font-weight: 700;" for="nombres">Nombres</label>
+                                <input class="form-control" id="nombres" type="text">
+                            </div>
+                            <div class="mb-2 flex-grow-1">
+                                <label class="col-form-label" style="font-weight: 700;"
+                                       for="descripcion">Descripcion</label>
+                                <textarea id="descripcion" class="form-control"></textarea>
+                            </div>
+                            <div class="mb-2 flex-grow-1">
+                                <label class="col-form-label" style="font-weight: 700;" for="file">Imagen</label>
+                                <input class="form-control form-control " id="file" type="file">
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="mb-2 flex-grow-1">
+                                    <label class="col-form-label" style="font-weight: 700;" for="precio">Precio</label>
+                                    <input class="form-control form-control" id="precio" type="number">
+                                </div>
+                                <div class="mb-2 flex-grow-1">
+                                    <label class="col-form-label " style="font-weight: 700;"
+                                           for="stock">Stock</label>
+                                    <input class="form-control form-control " id="stock" type="number">
+                                </div>
+                            </div>
+                            <div class="mb-4 flex-grow-1">
+                                <label class="col-form-label" style="font-weight: 700;" for="categoria">Categorias
+                                </label>
+                                <select class="form-select form-select" name="distritos" id="categoria" required>
+                                    <option value="ancon">Ancón</option>
+                                    <option value="ate">Ate</option>
+                                    <option value="barranco">Barranco</option>
+                                </select>
+                            </div>
+                            <div class="modal-footer d-flex align-items-center gap-2 p-0 pt-2">
+                                <button class="btn btn-warning flex-grow-1 rounded-end-0 m-0" style="font-weight: 700;"
+                                        type="reset">Limpiar</button>
+                                <button class="btn btn-success flex-grow-1 rounded-start-0 m-0" style="font-weight: 700;"
+                                        type="submit">Registrar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel2">Actualizar  producto</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="miFormulario2">
+                            <div class="mb-2 flex-grow-1">
+                                <label class="col-form-label" style="font-weight: 700;" for="nombres">Nombres</label>
+                                <input class="form-control" id="nombres2" type="text">
+                            </div>
+                            <div class="mb-2 flex-grow-1">
+                                <label class="col-form-label" style="font-weight: 700;"
+                                       for="descripcion">Descripcion</label>
+                                <textarea id="descripcion2" class="form-control"></textarea>
+                            </div>
+                            <div class="mb-2 flex-grow-1">
+                                <label class="col-form-label" style="font-weight: 700;" for="file">Imagen</label>
+                                <input class="form-control form-control " id="file2" type="file">
+                            </div>
+
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="mb-2 flex-grow-1">
+                                    <label class="col-form-label" style="font-weight: 700;" for="precio">Precio</label>
+                                    <input class="form-control form-control" id="precio2" type="number">
+                                </div>
+                                <div class="mb-2 flex-grow-1">
+                                    <label class="col-form-label " style="font-weight: 700;"
+                                           for="stock">Stock</label>
+                                    <input class="form-control form-control " id="stock2" type="number">
+                                </div>
+                            </div>
+                            <div class="mb-4 flex-grow-1">
+                                <label class="col-form-label" style="font-weight: 700;" for="categoria">Categorias
+                                </label>
+                                <select class="form-select form-select" name="distritos" id="categoria2" required>
+                                    <option value="ancon">Ancón</option>
+                                    <option value="ate">Ate</option>
+                                    <option value="barranco">Barranco</option>
+                                </select>
+                            </div>
+                            <div class="modal-footer d-flex align-items-center gap-2 p-0 pt-2">
+                                <button class="btn btn-warning flex-grow-1 rounded-end-0 m-0" style="font-weight: 700;"
+                                        type="reset">Limpiar</button>
+                                <button class="btn btn-success flex-grow-1 rounded-start-0 m-0" style="font-weight: 700;"
+                                        type="submit">Registrar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
                 <nav class="sidenav shadow-right sidenav-light">
@@ -189,445 +305,125 @@
                                 <div class="card-header border-bottom">
                                     <!-- Dashboard card navigation-->
                                     <ul class="nav nav-tabs card-header-tabs" id="dashboardNav" role="tablist">
-                                        <li class="nav-item me-1"><a class="nav-link active" id="overview-pill" href="#overview" data-bs-toggle="tab" role="tab" aria-controls="overview" aria-selected="true">Overview</a></li>
-                                        <li class="nav-item"><a class="nav-link" id="activities-pill" href="#activities" data-bs-toggle="tab" role="tab" aria-controls="activities" aria-selected="false">Activities</a></li>
+                                        <li class="nav-item me-1"><a class="nav-link active" id="overview-pill"
+                                                                     href="#overview" data-bs-toggle="tab" role="tab"
+                                                                     aria-controls="overview" aria-selected="true">
+                                            Productos</a></li>
+                                        <li class="nav-item"><a class="nav-link" id="activities-pill"
+                                                                href="#activities" data-bs-toggle="tab" role="tab"
+                                                                aria-controls="activities" aria-selected="false">
+                                            Categorias</a></li>
                                     </ul>
                                 </div>
                                 <div class="card-body">
                                     <div class="tab-content" id="dashboardNavContent">
                                         <!-- Dashboard Tab Pane 1-->
                                         <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-pill">
-                                            <div class="card mb-4">                                                
-                                                <div class="card-body">
-                                                    <table id="datatablesSimple">
+                                            <div class="card mb-4">
+                                                <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                        style="font-weight: 700;">Agregar producto</button>
+                                                <div class="table-responsive card-body">
+                                                    <table id="datatablesSimple" class="table table-bordered">
                                                         <thead>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Position</th>
-                                                                <th>Office</th>
-                                                                <th>Age</th>
-                                                                <th>Start date</th>
-                                                                <th>Salary</th>
-                                                                <th>Status</th>
-                                                                <th>Actions</th>
-                                                            </tr>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Nombre</th>
+                                                            <th scope="col">Descripcion</th>
+                                                            <th scope="col">Imagen</th>
+                                                            <th scope="col">Precio</th>
+                                                            <th scope="col">Stock</th>
+                                                            <th scope="col">Acciones</th>
+                                                        </tr>
                                                         </thead>
-                                                        <tfoot>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Position</th>
-                                                                <th>Office</th>
-                                                                <th>Age</th>
-                                                                <th>Start date</th>
-                                                                <th>Salary</th>
-                                                                <th>Status</th>
-                                                                <th>Actions</th>
-                                                            </tr>
-                                                        </tfoot>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Tiger Nixon</td>
-                                                                <td>System Architect</td>
-                                                                <td>Edinburgh</td>
-                                                                <td>61</td>
-                                                                <td>2011/04/25</td>
-                                                                <td>$320,800</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Garrett Winters</td>
-                                                                <td>Accountant</td>
-                                                                <td>Tokyo</td>
-                                                                <td>63</td>
-                                                                <td>2011/07/25</td>
-                                                                <td>$170,750</td>
-                                                                <td><div class="badge bg-warning rounded-pill">Pending</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Ashton Cox</td>
-                                                                <td>Junior Technical Author</td>
-                                                                <td>San Francisco</td>
-                                                                <td>66</td>
-                                                                <td>2009/01/12</td>
-                                                                <td>$86,000</td>
-                                                                <td><div class="badge bg-secondary text-white rounded-pill">Part-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Cedric Kelly</td>
-                                                                <td>Senior Javascript Developer</td>
-                                                                <td>Edinburgh</td>
-                                                                <td>22</td>
-                                                                <td>2012/03/29</td>
-                                                                <td>$433,060</td>
-                                                                <td><div class="badge bg-info rounded-pill">Contract</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Airi Satou</td>
-                                                                <td>Accountant</td>
-                                                                <td>Tokyo</td>
-                                                                <td>33</td>
-                                                                <td>2008/11/28</td>
-                                                                <td>$162,700</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Brielle Williamson</td>
-                                                                <td>Integration Specialist</td>
-                                                                <td>New York</td>
-                                                                <td>61</td>
-                                                                <td>2012/12/02</td>
-                                                                <td>$372,000</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Herrod Chandler</td>
-                                                                <td>Sales Assistant</td>
-                                                                <td>San Francisco</td>
-                                                                <td>59</td>
-                                                                <td>2012/08/06</td>
-                                                                <td>$137,500</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Rhona Davidson</td>
-                                                                <td>Integration Specialist</td>
-                                                                <td>Tokyo</td>
-                                                                <td>55</td>
-                                                                <td>2010/10/14</td>
-                                                                <td>$327,900</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Colleen Hurst</td>
-                                                                <td>Javascript Developer</td>
-                                                                <td>San Francisco</td>
-                                                                <td>39</td>
-                                                                <td>2009/09/15</td>
-                                                                <td>$205,500</td>
-                                                                <td><div class="badge bg-info rounded-pill">Contract</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Sonya Frost</td>
-                                                                <td>Software Engineer</td>
-                                                                <td>Edinburgh</td>
-                                                                <td>23</td>
-                                                                <td>2008/12/13</td>
-                                                                <td>$103,600</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Jena Gaines</td>
-                                                                <td>Office Manager</td>
-                                                                <td>London</td>
-                                                                <td>30</td>
-                                                                <td>2008/12/19</td>
-                                                                <td>$90,560</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Quinn Flynn</td>
-                                                                <td>Support Lead</td>
-                                                                <td>Edinburgh</td>
-                                                                <td>22</td>
-                                                                <td>2013/03/03</td>
-                                                                <td>$342,000</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Charde Marshall</td>
-                                                                <td>Regional Director</td>
-                                                                <td>San Francisco</td>
-                                                                <td>36</td>
-                                                                <td>2008/10/16</td>
-                                                                <td>$470,600</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Haley Kennedy</td>
-                                                                <td>Senior Marketing Designer</td>
-                                                                <td>London</td>
-                                                                <td>43</td>
-                                                                <td>2012/12/18</td>
-                                                                <td>$313,500</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>                                                            
+                                                        <tr>
+                                                            <th>1</th>
+                                                            <td>Martillo</td>
+                                                            <td>solet mattis necessitatibus ignota eirmod legere maiestatis
+                                                                sollicitudin persecuti</td>
+                                                            <td>
+                                                                <img src="https://i.imgur.com/xIjztKs.jpeg" width="50">
+                                                            </td>
+                                                            <td>S/5.00</td>
+                                                            <td>30</td>
+                                                            <td class="d-flex justify-content-center">
+                                                                <a class="d-flex gap-3" href="#">
+                                                                    <i onclick="eliminar()" class="bi bi-trash3-fill"
+                                                                       style="color: red;
+                                                                       font-size: 1.4rem"></i>
+                                                                    <i data-bs-toggle="modal"
+                                                                       data-bs-target="#exampleModal2" class="bi bi-pencil-fill"
+                                                                       style="font-size: 1.4rem"></i>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
                                             </div> 
                                         </div>
                                         <!-- Dashboard Tab Pane 2-->
-                                        <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-pill">
-                                            <div class="card mb-4">                                                
-                                                <div class="card-body">
-                                                    <table id="datatablesSimple">
+                                        <div class="tab-pane fade" id="activities" role="tabpanel" aria-labelledby="overview-pill">
+                                            <div class="card mb-4">
+                                                <div class="table-responsive card-body">
+                                                    <table id="tablaCategorias" class="table table-bordered">
                                                         <thead>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Position</th>
-                                                                <th>Office</th>
-                                                                <th>Age</th>
-                                                                <th>Start date</th>
-                                                                <th>Salary</th>
-                                                                <th>Status</th>
-                                                                <th>Actions</th>
-                                                            </tr>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Nombre</th>
+                                                            <th scope="col">Descripcion</th>
+                                                            <th scope="col">Acciones</th>
+                                                        </tr>
                                                         </thead>
-                                                        <tfoot>
-                                                            <tr>
-                                                                <th>Name</th>
-                                                                <th>Position</th>
-                                                                <th>Office</th>
-                                                                <th>Age</th>
-                                                                <th>Start date</th>
-                                                                <th>Salary</th>
-                                                                <th>Status</th>
-                                                                <th>Actions</th>
-                                                            </tr>
-                                                        </tfoot>
                                                         <tbody>
-                                                            <tr>
-                                                                <td>Tiger Nixon</td>
-                                                                <td>System Architect</td>
-                                                                <td>Edinburgh</td>
-                                                                <td>61</td>
-                                                                <td>2011/04/25</td>
-                                                                <td>$320,800</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Garrett Winters</td>
-                                                                <td>Accountant</td>
-                                                                <td>Tokyo</td>
-                                                                <td>63</td>
-                                                                <td>2011/07/25</td>
-                                                                <td>$170,750</td>
-                                                                <td><div class="badge bg-warning rounded-pill">Pending</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Ashton Cox</td>
-                                                                <td>Junior Technical Author</td>
-                                                                <td>San Francisco</td>
-                                                                <td>66</td>
-                                                                <td>2009/01/12</td>
-                                                                <td>$86,000</td>
-                                                                <td><div class="badge bg-secondary text-white rounded-pill">Part-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Cedric Kelly</td>
-                                                                <td>Senior Javascript Developer</td>
-                                                                <td>Edinburgh</td>
-                                                                <td>22</td>
-                                                                <td>2012/03/29</td>
-                                                                <td>$433,060</td>
-                                                                <td><div class="badge bg-info rounded-pill">Contract</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Airi Satou</td>
-                                                                <td>Accountant</td>
-                                                                <td>Tokyo</td>
-                                                                <td>33</td>
-                                                                <td>2008/11/28</td>
-                                                                <td>$162,700</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Brielle Williamson</td>
-                                                                <td>Integration Specialist</td>
-                                                                <td>New York</td>
-                                                                <td>61</td>
-                                                                <td>2012/12/02</td>
-                                                                <td>$372,000</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Herrod Chandler</td>
-                                                                <td>Sales Assistant</td>
-                                                                <td>San Francisco</td>
-                                                                <td>59</td>
-                                                                <td>2012/08/06</td>
-                                                                <td>$137,500</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Rhona Davidson</td>
-                                                                <td>Integration Specialist</td>
-                                                                <td>Tokyo</td>
-                                                                <td>55</td>
-                                                                <td>2010/10/14</td>
-                                                                <td>$327,900</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Colleen Hurst</td>
-                                                                <td>Javascript Developer</td>
-                                                                <td>San Francisco</td>
-                                                                <td>39</td>
-                                                                <td>2009/09/15</td>
-                                                                <td>$205,500</td>
-                                                                <td><div class="badge bg-info rounded-pill">Contract</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Sonya Frost</td>
-                                                                <td>Software Engineer</td>
-                                                                <td>Edinburgh</td>
-                                                                <td>23</td>
-                                                                <td>2008/12/13</td>
-                                                                <td>$103,600</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Jena Gaines</td>
-                                                                <td>Office Manager</td>
-                                                                <td>London</td>
-                                                                <td>30</td>
-                                                                <td>2008/12/19</td>
-                                                                <td>$90,560</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Quinn Flynn</td>
-                                                                <td>Support Lead</td>
-                                                                <td>Edinburgh</td>
-                                                                <td>22</td>
-                                                                <td>2013/03/03</td>
-                                                                <td>$342,000</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Charde Marshall</td>
-                                                                <td>Regional Director</td>
-                                                                <td>San Francisco</td>
-                                                                <td>36</td>
-                                                                <td>2008/10/16</td>
-                                                                <td>$470,600</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Haley Kennedy</td>
-                                                                <td>Senior Marketing Designer</td>
-                                                                <td>London</td>
-                                                                <td>43</td>
-                                                                <td>2012/12/18</td>
-                                                                <td>$313,500</td>
-                                                                <td><div class="badge bg-primary text-white rounded-pill">Full-time</div></td>
-                                                                <td>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark me-2"><i class="fa-solid fa-ellipsis-vertical"></i></button>
-                                                                    <button class="btn btn-datatable btn-icon btn-transparent-dark"><i class="fa-regular fa-trash-can"></i></button>
-                                                                </td>
-                                                            </tr>                                                            
+                                                        <tr>
+                                                            <th>1</th>
+                                                            <td>Mark</td>
+                                                            <td>Otto</td>
+                                                            <td class="d-flex justify-content-center">
+                                                                <a class="d-flex gap-3" href="#">
+                                                                    <i class="bi bi-trash3-fill"
+                                                                       style="color: red;
+                                                                       font-size: 1.4rem"></i>
+                                                                    <i class="bi bi-pencil-fill"
+                                                                       style="font-size: 1.4rem"></i>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">2</th>
+                                                            <td>Jacob</td>
+                                                            <td>Thornton</td>
+                                                            <td class="d-flex justify-content-center">
+                                                                <a class="d-flex gap-3" href="#">
+                                                                    <i class="bi bi-trash3-fill"
+                                                                       style="color: red;
+                                                                       font-size: 1.4rem"></i>
+                                                                    <i class="bi bi-pencil-fill"
+                                                                       style="font-size: 1.4rem"></i>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>3</th>
+                                                            <td>Larry the Bird</td>
+                                                            <td>@twitter</td>
+                                                            <td class="d-flex justify-content-center">
+                                                                <a class="d-flex gap-3" href="#">
+                                                                    <i class="bi bi-trash3-fill"
+                                                                       style="color: red;
+                                                                       font-size: 1.4rem"></i>
+                                                                    <i class="bi bi-pencil-fill"
+                                                                       style="font-size: 1.4rem"></i>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+
+
                                                         </tbody>
                                                     </table>
                                                 </div>
-                                            </div> 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -648,7 +444,8 @@
         <script src="assets/demo/chart-pie-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js" crossorigin="anonymous"></script>
         <script src="js/litepicker.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="js/sweetalert2.all.min.js"></script>
         
     </body>
 </html>

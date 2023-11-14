@@ -4,6 +4,14 @@ window.addEventListener('DOMContentLoaded', event => {
 
     const datatablesSimple = document.getElementById('datatablesSimple');
     if (datatablesSimple) {
-        new simpleDatatables.DataTable(datatablesSimple);
+        new simpleDatatables.DataTable(datatablesSimple,{
+            perPage:5,
+        });
+    }
+    const tablaCategorias = document.getElementById('tablaCategorias');
+    if (tablaCategorias) {
+        new simpleDatatables.DataTable(tablaCategorias, {
+            perPage:5
+        });
     }
 });
