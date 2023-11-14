@@ -1,14 +1,14 @@
 
-
+// Formaurio productos
 document.getElementById('miFormulario').addEventListener('submit', function (event) {
     // Obtener los campos de entrada
+    console.log("Hola mundo")
     let name = document.getElementById('nombres');
     let descripcion = document.getElementById('descripcion');
     let precio = document.getElementById('precio');
     let stock = document.getElementById('stock');
     let categoria = document.getElementById('categoria');
 
-    // Validar si los campos están vacíos
     // Validar si los campos están vacíos
     if (name.value === '' || descripcion.value === ''  || precio.value === '' || stock.value === '' || categoria.value === '') {
         event.preventDefault(); // Evita que el formulario se envíe
@@ -36,7 +36,6 @@ document.getElementById('miFormulario').addEventListener('submit', function (eve
     }
 
 });
-
 document.getElementById('miFormulario2').addEventListener('submit', function (event) {
     // Obtener los campos de entrada
     let name = document.getElementById('nombres2');
@@ -73,7 +72,7 @@ document.getElementById('miFormulario2').addEventListener('submit', function (ev
     }
 
 });
-
+// Formulario categorias
 document.getElementById('miFormulario3').addEventListener('submit', function (event) {
     // Obtener los campos de entrada
     let name = document.getElementById('nombres3');
@@ -107,7 +106,6 @@ document.getElementById('miFormulario3').addEventListener('submit', function (ev
     }
 
 });
-
 document.getElementById('miFormulario4').addEventListener('submit', function (event) {
     // Obtener los campos de entrada
     let name = document.getElementById('nombres4');
@@ -141,7 +139,7 @@ document.getElementById('miFormulario4').addEventListener('submit', function (ev
     }
 
 });
-
+// Formulario empleados
 
 function eliminarProducto() {
     Swal.fire({
@@ -185,3 +183,63 @@ function eliminarCategoria() {
     })
 }
 
+function eliminarEmpleado() {
+    Swal.fire({
+        title: 'Estas seguro?',
+        text: "Eliminaras el empleado",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, eliminar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Eliminado',
+                'El cliente ha sido borrado.',
+                'success'
+            )
+        }
+    })
+}
+function eliminarCargo() {
+    Swal.fire({
+        title: 'Estas seguro?',
+        text: "Eliminaras el empleado",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, eliminar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Eliminado',
+                'El cliente ha sido borrado.',
+                'success'
+            )
+        }
+    })
+}
+function eliminarArea() {
+    Swal.fire({
+        title: 'Estas seguro?',
+        text: "Eliminaras el empleado",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, eliminar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Eliminado',
+                'El cliente ha sido borrado.',
+                'success'
+            )
+        }
+    })
+}

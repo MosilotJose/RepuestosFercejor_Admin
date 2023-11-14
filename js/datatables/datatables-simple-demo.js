@@ -14,4 +14,17 @@ window.addEventListener('DOMContentLoaded', event => {
             perPage:5
         });
     }
+
+    const tablaEmpleados = document.getElementById('tablaEmple');
+    if (tablaEmpleados) {
+        new simpleDatatables.DataTable(tablaEmpleados,{
+            perPage:5,
+        });
+    }
+    const tablaEmpleadosE = document.getElementById('tablaEmpleE');
+    if (tablaEmpleadosE) {
+        new simpleDatatables.DataTable(tablaEmpleadosE, {
+            perPage:5
+        });
+    }
 });
