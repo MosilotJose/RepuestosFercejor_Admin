@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Tables - SB Admin Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="nav-fixed">
+<nav class="topnav navbar navbar-expand shadow justify-content-between justify-content-sm-start navbar-light bg-white" id="sidenavAccordion">
+    <!-- Sidenav Toggle Button-->
+    <button class="btn btn-icon btn-transparent-dark order-1 order-lg-0 me-2 ms-lg-2 me-lg-0" id="sidebarToggle"><i data-feather="menu"></i></button>
+    <!-- Navbar Brand-->
+    <!-- * * Tip * * You can use text or an image for your navbar brand.-->
+    <!-- * * * * * * When using an image, we recommend the SVG format.-->
+    <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
+    <a class="navbar-brand pe-3 ps-4 ps-lg-2" href="home.html">FERCEJOR</a>
+    <!-- Navbar Search Input-->
+    <!-- * * Note: * * Visible only on and above the lg breakpoint-->
+    <!-- Navbar Items-->
+    <ul class="navbar-nav align-items-center ms-auto">
+        <!-- Documentation Dropdown-->
+
+        <!-- Navbar Search Dropdown-->
+        <!-- * * Note: * * Visible only below the lg breakpoint-->
+        <li class="nav-item dropdown no-caret me-3 d-lg-none">
+            <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="searchDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="search"></i></a>
+            <!-- Dropdown - Search-->
+            <div class="dropdown-menu dropdown-menu-end p-3 shadow animated--fade-in-up" aria-labelledby="searchDropdown">
+                <form class="form-inline me-auto w-100">
+                    <div class="input-group input-group-joined input-group-solid">
+                        <input class="form-control pe-0" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
+                        <div class="input-group-text"><i data-feather="search"></i></div>
+                    </div>
+                </form>
+            </div>
+        </li>
+        <!-- Alerts Dropdown-->
+        <li class="nav-item dropdown no-caret d-none d-sm-block me-3 dropdown-notifications">
+            <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownAlerts" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="bell"></i></a>
+            <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownAlerts">
+                <h6 class="dropdown-header dropdown-notifications-header">
+                    <i class="me-2" data-feather="bell"></i>
+                    Alerts Center
+                </h6>
+                <!-- Example Alert 1-->
+                <a class="dropdown-item dropdown-notifications-item" href="#!">
+                    <div class="dropdown-notifications-item-icon bg-warning"><i data-feather="activity"></i></div>
+                    <div class="dropdown-notifications-item-content">
+                        <div class="dropdown-notifications-item-content-details">December 29, 2021</div>
+                        <div class="dropdown-notifications-item-content-text">This is an alert message. It's nothing serious, but it requires your attention.</div>
+                    </div>
+                </a>
+                <!-- Example Alert 2-->
+                <a class="dropdown-item dropdown-notifications-item" href="#!">
+                    <div class="dropdown-notifications-item-icon bg-info"><i data-feather="bar-chart"></i></div>
+                    <div class="dropdown-notifications-item-content">
+                        <div class="dropdown-notifications-item-content-details">December 22, 2021</div>
+                        <div class="dropdown-notifications-item-content-text">A new monthly report is ready. Click here to view!</div>
+                    </div>
+                </a>
+                <!-- Example Alert 3-->
+                <a class="dropdown-item dropdown-notifications-item" href="#!">
+                    <div class="dropdown-notifications-item-icon bg-danger"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="dropdown-notifications-item-content">
+                        <div class="dropdown-notifications-item-content-details">December 8, 2021</div>
+                        <div class="dropdown-notifications-item-content-text">Critical system failure, systems shutting down.</div>
+                    </div>
+                </a>
+                <!-- Example Alert 4-->
+                <a class="dropdown-item dropdown-notifications-item" href="#!">
+                    <div class="dropdown-notifications-item-icon bg-success"><i data-feather="user-plus"></i></div>
+                    <div class="dropdown-notifications-item-content">
+                        <div class="dropdown-notifications-item-content-details">December 2, 2021</div>
+                        <div class="dropdown-notifications-item-content-text">New user request. Woody has requested access to the organization.</div>
+                    </div>
+                </a>
+                <a class="dropdown-item dropdown-notifications-footer" href="#!">View All Alerts</a>
+            </div>
+        </li>
+        <!-- Messages Dropdown-->
+
+        <!-- User Dropdown-->
+        <li class="nav-item dropdown no-caret dropdown-user me-3 me-lg-4">
+            <a class="btn btn-icon btn-transparent-dark dropdown-toggle" id="navbarDropdownUserImage" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img class="img-fluid" src="assets/img/illustrations/profiles/profile-1.png" /></a>
+            <div class="dropdown-menu dropdown-menu-end border-0 shadow animated--fade-in-up" aria-labelledby="navbarDropdownUserImage">
+                <h6 class="dropdown-header d-flex align-items-center">
+                    <img class="dropdown-user-img" src="assets/img/illustrations/profiles/profile-1.png" />
+                    <div class="dropdown-user-details">
+                        <div class="dropdown-user-details-name">Valerie Luna</div>
+                        <div class="dropdown-user-details-email">vluna@aol.com</div>
+                    </div>
+                </h6>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#!">
+                    <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
+                    Account
+                </a>
+                <a class="dropdown-item" href="#!">
+                    <div class="dropdown-item-icon"><i data-feather="log-out"></i></div>
+                    Logout
+                </a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+
+        <!-- Modales de Venta -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModaAcompras"
+          aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel5">Registro de compra</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="tablaCompras" >
+                            <div class="mb-2 flex-grow-1 d-flex justify-content-between gap-2 flex-column">
+                                <div class="flex-grow-1">
+                                    <label class="col-form-label" style="font-weight: 700;" for="comprasNombre">
+                                        Empleado</label>
+                                    <input class="form-control " id="comprasNombre" type="text">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <label class="col-form-label" style="font-weight: 700;" for="comprasDescrippcion">
+                                        Proveedor</label>
+                                    <input class="form-control " id="comprasDescrippcion" type="text">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <label class="col-form-label" style="font-weight: 700;" for="comprasProducto">
+                                        Producto</label>
+                                    <input class="form-control " id="comprasProducto" type="text">
+                                </div>
+
+                                <div class="d-flex justify-content-between gap-3">
+                                    <div class="flex-grow-1">
+                                        <label class="col-form-label" style="font-weight: 700;" for="comprasPrecio">
+                                            Precio</label>
+                                        <input class="form-control " id="comprasPrecio" type="text">
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <label class="col-form-label" style="font-weight: 700;" for="comprasCantidad">
+                                            Cantidad</label>
+                                        <input class="form-control " id="comprasCantidad" type="text">
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 mb-4">
+                                    <label class="col-form-label" style="font-weight: 700;" for="comprasTotal">
+                                        Precio total</label>
+                                    <input class="form-control " id="comprasTotal" type="text" disabled>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer d-flex align-items-center gap-2 p-0 pt-2">
+                                <button class="btn btn-warning flex-grow-1 rounded-end-0 m-0" style="font-weight: 700;"
+                                        type="reset">Limpiar</button>
+                                <button class="btn btn-success flex-grow-1 rounded-start-0 m-0" style="font-weight: 700;"
+                                        type="submit">Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel2">Actualizacion de compra</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="AtablaCompras" >
+                            <div class="mb-2 flex-grow-1 d-flex justify-content-between gap-2 flex-column">
+                                <div class="flex-grow-1">
+                                    <label class="col-form-label" style="font-weight: 700;" for="AcomprasNombre">
+                                        Nombre</label>
+                                    <input class="form-control " id="AcomprasNombre" type="text">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <label class="col-form-label" style="font-weight: 700;" for="AcomprasDescrip">
+                                        Proveedor</label>
+                                    <input class="form-control " id="AcomprasDescrip" type="text">
+                                </div>
+                                <div class="flex-grow-1">
+                                    <label class="col-form-label" style="font-weight: 700;" for="AcomprasProducto">
+                                        Producto</label>
+                                    <input class="form-control " id="AcomprasProducto" type="text">
+                                </div>
+
+                                <div class="d-flex justify-content-between gap-3">
+                                    <div class="flex-grow-1">
+                                        <label class="col-form-label" style="font-weight: 700;" for="AcomprasPrecio">
+                                            Precio</label>
+                                        <input class="form-control " id="AcomprasPrecio" type="text">
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <label class="col-form-label" style="font-weight: 700;" for="AcomprasCantidad">
+                                            Cantidad</label>
+                                        <input class="form-control " id="AcomprasCantidad" type="text">
+                                    </div>
+                                </div>
+                                <div class="flex-grow-1 mb-4">
+                                    <label class="col-form-label" style="font-weight: 700;" for="AcomprasTotal">
+                                        Precio total</label>
+                                    <input class="form-control " id="AcomprasTotal" type="text" disabled>
+                                </div>
+                            </div>
+
+                            <div class="modal-footer d-flex align-items-center gap-2 p-0 pt-2">
+                                <button class="btn btn-warning flex-grow-1 rounded-end-0 m-0" style="font-weight: 700;"
+                                        type="reset">Limpiar</button>
+                                <button class="btn btn-success flex-grow-1 rounded-start-0 m-0" style="font-weight: 700;"
+                                        type="submit">Actualizar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sidenav shadow-right sidenav-light">
+                    <!--OPCIONES BARRA MENU-->
+                    <div class="sidenav-menu">
+                        <div class="nav accordion" id="accordionSidenav">
+                            <!-- Sidenav Menu Heading (Account)-->
+                            <!-- * * Note: * * Visible only on and above the sm breakpoint-->
+                            <div class="sidenav-menu-heading d-sm-none">Account</div>
+                            <!-- Sidenav Link (Alerts)-->
+                            <!-- * * Note: * * Visible only on and above the sm breakpoint-->
+                            <a class="nav-link d-sm-none" href="#!">
+                                <div class="nav-link-icon"><i data-feather="bell"></i></div>
+                                Alerts
+                                <span class="badge bg-warning-soft text-warning ms-auto">4 New!</span>
+                            </a>
+                            <!-- Sidenav Link (Messages)-->
+                            <!-- * * Note: * * Visible only on and above the sm breakpoint-->
+
+                            <div class="sidenav-menu-heading"></div>
+
+
+
+                            <!-- Sidenav Accordion (Dashboard)-->
+                            <a class="nav-link" href="home.html" >
+                                <div class="nav-link-icon"><i data-feather="grid"></i></div>
+                                Inicio
+                            </a>
+
+                            <a class="nav-link" href="productos.html"   >
+                                <div class="nav-link-icon"><i data-feather="grid"></i></div>
+                                Productos
+                            </a>
+
+                            <a class="nav-link" href="usuarios.html"  >
+                                <div class="nav-link-icon "><i data-feather="grid"></i></div>
+                                Usuarios
+                            </a>
+
+                            <a class="nav-link" href="clientes.html"   >
+                                <div class="nav-link-icon"><i data-feather="grid"></i></div>
+                                Clientes
+                            </a>
+
+                            <a class="nav-link" href="ventas.html"   >
+                                <div class="nav-link-icon active"><i data-feather="grid"></i></div>
+                                Ventas
+                            </a>
+                            <a class="nav-link" href="compras.html"   >
+                                <div class="nav-link-icon"><i data-feather="grid"></i></div>
+                                Compras
+                            </a>
+
+
+                        </div>
+                    </div>
+                    <!-- PARTE FINAL BARRA MENU-->
+                    <div class="sidenav-footer">
+                        <div class="sidenav-footer-content">
+                            <div class="sidenav-footer-subtitle">Logged in as:</div>
+                            <div class="sidenav-footer-title">Valerie Luna</div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <!-- Main page content-->
+                    <div class="row">
+                        <div class="col-xxl-12 mt-4">
+                            <!-- Tabbed dashboard card example-->
+                            <div class="card mb-4">
+                                <div
+                                        class="card-header border-bottom d-flex align-items-stretch justify-content-between pb-0">
+                                    <!-- Dashboard card navigation-->
+                                    <ul class="nav nav-tabs card-header-tabs" id="dashboardNav" role="tablist">
+                                        <li class="nav-item me-1"><a class="nav-link active" id="overview-pill"
+                                                                     href="#empleado" data-bs-toggle="tab" role="tab"
+                                                                     aria-controls="overview" aria-selected="true">
+                                            Compras</a></li>
+                                    </ul>
+                                    <ul class="mb-0 dropdown">
+                                        <button class="btn btn-light border border-1 border-black dropdown-toggle"
+                                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="bi bi-box-arrow-right pe-2"></i>
+                                            Exportar</button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">
+                                                <i class="bi bi-file-earmark-pdf-fill"></i>
+                                                PDF</a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                <i class="bi bi-file-earmark-excel-fill"></i>
+                                                Excel</a></li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div class="tab-content" id="dashboardNavContent">
+                                        <!-- Dashboard Tab Pane 1-->
+                                        <div class="tab-pane fade show active" id="empleado" role="tabpanel"
+                                             aria-labelledby="overview-pill">
+                                            <div class="card mb-4" >
+                                                <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                                        style="font-weight: 700;">Agregar compras</button>
+                                                <div class="table-responsive card-body">
+                                                    <table id="tablaEmple" class="table table-bordered">
+                                                        <thead>
+                                                        <tr>
+                                                            <th scope="col">#</th>
+                                                            <th scope="col">Nombre</th>
+                                                            <th scope="col">Proveedor</th>
+                                                            <th scope="col">Producto</th>
+                                                            <th scope="col">P. venta</th>
+                                                            <th scope="col">Cantidad</th>
+                                                            <th scope="col">Total</th>
+                                                            <th scope="col">Acciones</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <th>1</th>
+                                                            <td>Marcos Daniel</td>
+                                                            <td>Romero Garcia</td>
+                                                            <td>Martillo y clavos</td>
+                                                            <td>Peru</td>
+                                                            <td>5</td>
+                                                            <td>S/100.50</td>
+                                                            <td>
+                                                                <div class="d-flex gap-2">
+                                                                    <div>
+                                                                        <button class="btn btn-indigo p-1">
+                                                                            <i class="bi bi-printer"
+                                                                               style="color: white;
+                                                                           font-size: 1rem"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                    <button class="btn btn-dark p-1">
+                                                                        <i data-bs-toggle="modal"
+                                                                           data-bs-target="#exampleModal2" class="bi bi-pencil-fill"
+                                                                           style="font-size: 1rem"></i>
+                                                                    </button>
+                                                                </div>
+
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+            </div>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script src="js/datatables/datatables-simple-demo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="assets/demo/chart-pie-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js" crossorigin="anonymous"></script>
+    <script src="js/litepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/comprasSweet.js"></script>
+
+</body>
+</html>

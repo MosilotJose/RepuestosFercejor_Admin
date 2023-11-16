@@ -252,3 +252,34 @@ function eliminarArea() {
         }
     })
 }
+
+
+function generarCreden(){
+    Swal.fire({
+        title: 'Deseas proceder?',
+        text: "Generaras una credencial para el empleado",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, generar',
+        cancelButtonText: 'Cancelar'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Generado',
+                'La credencial se ha creado correctamente',
+                'success'
+            )
+        }
+    })
+}
+
+
+function NOgenerarCreden(){
+    Swal.fire({
+        icon: "error",
+        title: "Ha sucedido un error!",
+        text: "La credencial ya ha sido generada anteriormente",
+    })
+}

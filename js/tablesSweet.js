@@ -5,12 +5,13 @@ document.getElementById('miFormulario').addEventListener('submit', function (eve
     console.log("Hola mundo")
     let name = document.getElementById('nombres');
     let descripcion = document.getElementById('descripcion');
-    let precio = document.getElementById('precio');
+    let precioCompra = document.getElementById('P_compra');
+    let precioVenta = document.getElementById('P_venta');
     let stock = document.getElementById('stock');
     let categoria = document.getElementById('categoria');
 
     // Validar si los campos están vacíos
-    if (name.value === '' || descripcion.value === ''  || precio.value === '' || stock.value === '' || categoria.value === '') {
+    if (name.value === '' || descripcion.value === ''  || precioCompra.value === '' || precioVenta.value === ''  || stock.value === '' || categoria.value === '') {
         event.preventDefault(); // Evita que el formulario se envíe
         Swal.fire(
             'Campos vacíos',
@@ -40,13 +41,14 @@ document.getElementById('miFormulario2').addEventListener('submit', function (ev
     // Obtener los campos de entrada
     let name = document.getElementById('nombres2');
     let descripcion = document.getElementById('descripcion2');
-    let precio = document.getElementById('precio2');
+    let precioCompra = document.getElementById('P_compra2');
+    let precioVenta = document.getElementById('P_venta2');
     let stock = document.getElementById('stock2');
     let categoria = document.getElementById('categoria2');
 
     // Validar si los campos están vacíos
     // Validar si los campos están vacíos
-    if (name.value === '' || descripcion.value === ''  || precio.value === '' || stock.value === '' || categoria.value === '') {
+    if (name.value === '' || descripcion.value === ''  || precioCompra.value === '' || precioVenta.value === '' || stock.value === '' || categoria.value === '') {
         event.preventDefault(); // Evita que el formulario se envíe
         Swal.fire(
             'Campos vacíos',

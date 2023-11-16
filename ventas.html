@@ -22,7 +22,7 @@
             <!-- * * Tip * * You can use text or an image for your navbar brand.-->
             <!-- * * * * * * When using an image, we recommend the SVG format.-->
             <!-- * * * * * * Dimensions: Maximum height: 32px, maximum width: 240px-->
-            <a class="navbar-brand pe-3 ps-4 ps-lg-2" href="index.html">FERCEJOR</a>
+            <a class="navbar-brand pe-3 ps-4 ps-lg-2" href="home.html">FERCEJOR</a>
             <!-- Navbar Search Input-->
             <!-- * * Note: * * Visible only on and above the lg breakpoint-->
             <!-- Navbar Items-->
@@ -128,13 +128,13 @@
                             <div class="mb-2 flex-grow-1 d-flex justify-content-between gap-2 flex-column">
                                 <div class="flex-grow-1">
                                     <label class="col-form-label" style="font-weight: 700;" for="ventasNombre">
-                                        Nombre</label>
+                                        Cliente</label>
                                     <input class="form-control " id="ventasNombre" type="text">
                                 </div>
                                 <div class="flex-grow-1">
                                     <label class="col-form-label" style="font-weight: 700;" for="ventasDescrippcion">
-                                        Descripcion</label>
-                                    <textarea class="form-control " id="ventasDescrippcion" type="text"> </textarea>
+                                        Empleado</label>
+                                    <input class="form-control " id="ventasDescrippcion" type="text">
                                 </div>
                                 <div class="flex-grow-1">
                                     <label class="col-form-label" style="font-weight: 700;" for="ventasProducto">
@@ -185,13 +185,13 @@
                             <div class="mb-2 flex-grow-1 d-flex justify-content-between gap-2 flex-column">
                                 <div class="flex-grow-1">
                                     <label class="col-form-label" style="font-weight: 700;" for="AventasNombre">
-                                        Nombre</label>
+                                        Cliente</label>
                                     <input class="form-control " id="AventasNombre" type="text">
                                 </div>
                                 <div class="flex-grow-1">
                                     <label class="col-form-label" style="font-weight: 700;" for="AventasDescrippcion">
-                                        Descripcion</label>
-                                    <textarea class="form-control " id="AventasDescrippcion" type="text"> </textarea>
+                                        Empleado</label>
+                                    <input class="form-control" id="AventasDescrippcion" type="text">
                                 </div>
                                 <div class="flex-grow-1">
                                     <label class="col-form-label" style="font-weight: 700;" for="AventasProducto">
@@ -254,12 +254,12 @@
                             
                             
                             <!-- Sidenav Accordion (Dashboard)-->
-                            <a class="nav-link" href="index.html" >
+                            <a class="nav-link" href="home.html" >
                                 <div class="nav-link-icon"><i data-feather="grid"></i></div>
                                 Inicio                                
                             </a>
 
-                            <a class="nav-link" href="tables.html"   >
+                            <a class="nav-link" href="productos.html"   >
                                 <div class="nav-link-icon"><i data-feather="grid"></i></div>
                                 Productos                                
                             </a>
@@ -278,7 +278,10 @@
                                 <div class="nav-link-icon active"><i data-feather="grid"></i></div>
                                 Ventas                                
                             </a>
-                            
+                            <a class="nav-link" href="compras.html"   >
+                                <div class="nav-link-icon"><i data-feather="grid"></i></div>
+                                Compras
+                            </a>
                             
                             
                         </div>
@@ -336,8 +339,8 @@
                                                         <thead>
                                                         <tr>
                                                             <th scope="col">#</th>
-                                                            <th scope="col">Nombre</th>
-                                                            <th scope="col">Descripcion</th>
+                                                            <th scope="col">Cliente</th>
+                                                            <th scope="col">Empleado</th>
                                                             <th scope="col">Producto</th>
                                                             <th scope="col">Precio</th>
                                                             <th scope="col">Cantidad</th>
@@ -377,7 +380,6 @@
                                                 </div>
                                             </div> 
                                         </div>
-                                        <!-- Dashboard Tab Pane 2-->
                                     </div>
                                 </div>
                             </div>                            
