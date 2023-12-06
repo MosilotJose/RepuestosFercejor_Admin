@@ -1,3 +1,3 @@
 # RepuestosFercejor_Admin
-- Hola mosi homosexual
+- Hola mosi 
 
